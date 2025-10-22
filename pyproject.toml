@@ -1,10 +1,10 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0", "setuptools-scm>=8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "jwst-tools"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Python package to analyze JWST data"
 readme = "README.md"
 license = {text = "BSD-3-Clause"}
@@ -35,3 +35,6 @@ dependencies = [
 
 [tool.setuptools]
 packages = ["jwst_tools"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
