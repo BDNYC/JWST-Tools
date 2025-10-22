@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm>=8.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jwst-tools"
+dynamic = ["version"]
+description = "Python package to analyze JWST data"
+readme = "README.md"
+license = {text = "BSD-3-Clause"}
+authors = [
+    {name = "canavarrete01"},
+    {name = "kelle"}
+]
+requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Astronomy",
+]
+dependencies = [
+    "astropy",
+    "matplotlib",
+    "jwst",
+    "astroquery",
+    "specutils",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BDNYC/JWST-Tools"
+"Bug Tracker" = "https://github.com/BDNYC/JWST-Tools/issues"
+
+[tool.setuptools]
+packages = ["jwst_tools"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
